@@ -9,7 +9,7 @@ Two facts we know or have to know to set things straight:
 - `&` for the address and
 - `*` for the value at an address.
 
-Lets say we have `int num = 3;` We assign the value `3` to the variable `num`.
+Let's say we have `int num = 3;` We assign the value `3` to the variable `num`.
 
 So to print out the value of `num`:
 
@@ -32,7 +32,7 @@ printf("value at address of num: %d\n", *(&num));
 /* value at address of num: 3 */
 ```
 
-### Take aways
+### Takeaways
 
 So what we have been able to deduce is:
 
@@ -72,7 +72,7 @@ int *ptr1 = NULL;
 ptr = &var;
 ```
 
-Now lets get down to pointer business. Say we have `num` assigned the value of `3`, just has we have done before. We shall create a pointer to `num`.
+Now let's get down to pointer business. Say we have `num` assigned the value of `3`, just as we have done before. We shall create a pointer to `num`.
 
 ```c
 int num = 3;
@@ -83,7 +83,7 @@ I have a question for you? You better play with the code to understand better.
 
 ### Question
 
-_Which is the pointer? `*`, `ptr`or `*ptr`?_
+_Which is the pointer? `*`, `ptr` or `*ptr`?_
 
 ### My answer
 
@@ -97,7 +97,7 @@ Well, I hope you gave it some thought.
 
 ### Pointer value and address
 
-How do we get th value of a pointer? Don't get confused about the value of a pointer and what value the pointer points to. Try to understand the two before moving on. Something more or less like, value of a pointer and value at a pointer.
+How do we get the value of a pointer? Don't get confused about the value of a pointer and what value the pointer points to. Try to understand the two before moving on. Something more or less like, the value of a pointer and the value at a pointer - what the pointer points to.
 
 ```c
 printf("value of ptr: %p\n", ptr);
@@ -118,7 +118,7 @@ printf("address of ptr: %p\n", &ptr);
 /* address of ptr: 0x7ffe5faa05d0 */
 ```
 
-### Take ways
+### Take aways
 
 - In `int *ptr = &num`, `ptr` is the pointer.
 - `ptr` should be assigned `NULL` until given a location.
