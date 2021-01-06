@@ -36,6 +36,11 @@ Set your default username and email with,
 git config --global user.name <your-username>
 git config --global user.email <your-email>
 
+
+Set your local (specific to project) username and email with,
+git config --global user.name <your-username>
+git config --global user.email <your-email>
+
 Usually, your email and username will match your github email and username.
 
 Create file
