@@ -22,7 +22,9 @@ The PAT can only be used over HTTPS Git operations
 - Copy the token and save it somewhere safe (It will still be there when you check it)
 
 ## Add token to vscode
-vscode is my go-to text editor for my all-round developement. Let see
+
+vscode is my go-to text editor for my all-round developement. The token would be used as the password.
+
 - `git config credential.helper store`
 - Now clone, push or pull with `username` and copied `token` instead of the `password`
 
@@ -42,12 +44,12 @@ vscode is my go-to text editor for my all-round developement. Let see
 - We can now add the ssh public key to Github. We can cat the public key then copy it or open the public key in a text editor and then copy it.
 - `gedit ~/.ssh/id_ed25519.pub` will open the public key in gedit. Copy it.
 - On Github just as we did for the toke, go to the top right corner of the page and click on the avatar
-- Click on settings on the drop-down
-- Click on SSH and GPG keys
-- Click New SSH key or Add SSH key.
-- add a title and then paste the public key from the text editor into the key field
-- then click on `add SSH Key` and we are done adding ssh key to Github
-- the dummy repo we created earlier would have a URL, `https://github.com/username/dummyrepo.git` if we were to use HTTPS but for the SSH, `git@github.com:username/dummyrepo.git`
+- Click on `Settings` on the drop-down
+- Click on `SSH and GPG keys`
+- Click `New SSH key` or `Add SSH key`.
+- add a `title` and then paste the `public key` from the text editor into the `key` field
+- Then click on `add SSH Key` and we are done adding ssh key to Github
+- The dummy repo we created earlier would have a URL, `https://github.com/username/dummyrepo.git` if we were to use HTTPS but for the SSH, `git@github.com:username/dummyrepo.git`
 - Let's clone the project from Github using SSH, `git clone git@github.com:username/dummyrepo.git`
 - `cd dummyrepo` and then `echo "# dummyrepo" >> README.md`
 - `git add README.md` and `git commit -m "README.md"` to add and commit the `README.md`
