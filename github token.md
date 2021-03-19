@@ -19,12 +19,12 @@ The PAT can only be used over HTTPS Git operations
 - At the right, click on `Generate token`
 - Give the token a name or description and check some privileges you want to give to the token
 - Click `Generate token`, a green button at the bottom of the page
-- Copy the token and save it somewhere safe (It will still be there when you check it)
-- If the token is forgetten or you could not save it, the regenerate it.
+- Copy the token and save it somewhere safely (It will still be there when you check it)
+- If the token is forgotten or you could not save it, regenerate it.
 
-## Add token to vscode
+## Add token to git
 
-vscode is my go-to text editor for my all-round developement. The token would be used as the password.
+vscode is my go-to text editor for my all-round development. Entering the `username` and `token` every time is a nuisance. We would add the `token` globally to git. For a specific application, we can add the token locally. The `token` would be used as the password.
 
 - `git config --global credential.helper store`
 - Now clone, push or pull with `username` and copied `token` instead of the `password`
@@ -82,7 +82,7 @@ Say you have the repo already using HTTPS then you have to change the URL on you
 - [Awesome git tutorial][learn-git]
 - [What is Basic Authentication][what-is-basic-auth]
 - [What is Token Authentication][what-is-token-auth]
-
+- [dark image][github-dark]
 #
 
 [deprecation-url]: https://developer.github.com/changes/2019-11-05-deprecated-passwords-and-authorizations-api/
@@ -94,3 +94,4 @@ Say you have the repo already using HTTPS then you have to change the URL on you
 [basic-auth]: https://en.wikipedia.org/wiki/Basic_access_authentication
 [what-is-basic-auth]: https://www.ibm.com/support/knowledgecenter/en/SSGMCP_5.1.0/com.ibm.cics.ts.internet.doc/topics/dfhtl2a.html
 [what-is-token-auth]: https://www.okta.com/identity-101/what-is-token-based-authentication/
+[github-dark]:https://img.helpnetsecurity.com/wp-content/uploads/2016/11/09105745/github-dark.jpg
