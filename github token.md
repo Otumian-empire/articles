@@ -20,6 +20,7 @@ The PAT can only be used over HTTPS Git operations
 - Give the token a name or description and check some privileges you want to give to the token
 - Click `Generate token`, a green button at the bottom of the page
 - Copy the token and save it somewhere safe (It will still be there when you check it)
+- If the token is forgetten or you could not save it, the regenerate it.
 
 ## Add token to vscode
 
