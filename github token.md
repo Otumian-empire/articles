@@ -26,7 +26,7 @@ The PAT can only be used over HTTPS Git operations
 
 vscode is my go-to text editor for my all-round developement. The token would be used as the password.
 
-- `git config credential.helper store`
+- `git config --global credential.helper store`
 - Now clone, push or pull with `username` and copied `token` instead of the `password`
 
 ## SSH
