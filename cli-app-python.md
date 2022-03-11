@@ -1,4 +1,4 @@
-# Arithmatic on the Commandline - Clirithmetic
+# Arithmetic on the Command-line - Clirithmetic
 
 ## Introduction
 
@@ -69,16 +69,16 @@ class Backend:
 
 We know the function to call based on the operator but how are we going to do that? Let's say we need a parser - this parser's job is to break the input we shall take from the CLI into the operator and the two operands. Also, we would use this same parser to catch any wrong data that is passed. We need only the operator to be a string and the operands as either integer or float. So the function of the parser is to:
 
-- check if there are three values in params
-- check if the first value of params is the operator
-- check if the second and third value of params is a type of float or integer
-- make the second and third value of params the first and second operands
-- check for zero division errors
-- check for value error
-  - operator must be either of +, -, \*, \*\*, /, or %
-- pass the index of the operator instead of the operator character
-- raise an exception and exit when there is an error
-- return the parsed values
+-   check if there are three values in params
+-   check if the first value of params is the operator
+-   check if the second and third value of params is a type of float or integer
+-   make the second and third value of params the first and second operands
+-   check for zero division errors
+-   check for value error
+    -   operator must be either of +, -, \*, \*\*, /, or %
+-   pass the index of the operator instead of the operator character
+-   raise an exception and exit when there is an error
+-   return the parsed values
 
 We can debate on whether to add the parser as a method to the `Arithmetic class` or make it a stand-alone function. It is easier without tweaking, to make the parser a function than a method of the class. I think it can be done. What do you think?
 
@@ -316,8 +316,8 @@ otumian@monkey-tail:~/Projects/Clirithmetic-oe$
 
 ## Source
 
-- [python-doc]
-- [Clirithmetic]
+-   [python-doc]
+-   [Clirithmetic]
 
 ## Conclusion
 
@@ -326,4 +326,4 @@ Clirithmetic performs binary arithmetic operations on the CLI. Data taken from t
 ##
 
 [python-doc]: https://docs.python.org/3/library/sys.html?highlight=sys#sys.argv
-[Clirithmetic]: https://github.com/Otumian-empire/Clirithmetic-oe
+[clirithmetic]: https://github.com/Otumian-empire/Clirithmetic-oe
