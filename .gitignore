@@ -5,3 +5,6 @@ __pycache__
 cspell.json
 .editorconfig
 Custom Email and Password Validator in Python/password/python_file.py
+*.class
+*.pdf
+*.zip
