@@ -495,7 +495,7 @@ Abstraction, also known as Data Abstraction, is an OOP concept where we expose t
 - _Abstract_ classes may have properties and methods
 - _Abstract_ methods must be implemented by the subclass
 
-Another to implement an Abstraction is to use an interface.
+Another way to implement an Abstraction is to use an interface.
 
 - _Interfaces_ are _Abstract_ classes
 - _Interfaces_ have only _abstract_ methods
