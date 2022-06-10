@@ -8,12 +8,16 @@ In this session, we will discuss:
   - [Inner Class](#inner-class)
   - [Enum](#enum)
   - [Conclusion](#conclusion)
+  - [Problem](#problem)
+    - [Source](#source)
 
 ## Anonymous Class
 
-_Inheritance_ is a concept of _subclass_-ing another class, thereby having access to the opened attribute (or via setters and getters if closed) and methods. _Polymorphism_ is the concept of having many forms. It is either we can _overload_ or _override_ a said method. So we have to inherit a class we can _overload_ or _override_ it. With an _Anonymous_ class, we can extend the class on the fly. However, this extension only exits for the said object. So another object of the same class will not have that extension.
+<div id="anonymous-class"/>
 
-Say we have an _Employee_ class. Every employee get a monthly and due to some circumstance, an employee's salary will be increased by some fraction. In such case an employee is said to be rated.
+_Inheritance_ is a concept of _subclass_-ing another class, thereby having access to the opened attribute (or via setters and getters if closed) and methods. _Polymorphism_ is the concept of having many forms. It is either we can _overload_ or _override_ the said method. So we have to inherit a class we can _overload_ or _override_. With an _Anonymous_ class, we can extend the class on the fly. However, this extension only exits for the said object. So another object of the same class will not have that extension.
+
+Say we have an _Employee_ class. Every employee gets a monthly and due to some circumstances, an employee's salary will be increased by some fraction. In such a case an employee is said to be rated.
 
 ```java
 // Employee.java
@@ -51,7 +55,7 @@ public class Employee {
 
 ```
 
-We will create two instances the _Employee_ class and later make one of the objects rated.
+We will create two instances of the _Employee_ class and later make one of the objects rated.
 
 ```java
 // Main.java
@@ -80,15 +84,15 @@ public class Main {
 
 > Consider reading through the comment on each line
 
-Now I want draw our attention to where harry's rate was calculated. Assuming we want to either reduce or increase the rate at which the salary is increased, what would we do? Think about this for a while.
+Now I want to draw our attention to where harry's rate was calculated. Assuming we want to either reduce or increase the rate at which the salary is increased, what would we do? Think about this for a while.
 
 I believe we would all agree that:
 
-- we could pass the **rate** to the `calculateRate` method as parameter
+- we could pass the **rate** to the `calculateRate` method as a parameter
 - we could _overload_ the `calculateRate` in the _Employee_ class
 - we could _subclass_ the _Employee_ class then we'd _override_ and or _overload_ `calculateRate` method is the said _subclass_
 
-Assuming we run into case like this but we don't have or want to do any of the above, we could extend the `calculateRate` method on the run. For this, let's create another _Employee_ object and set the rate to `0.15`. This is sone at where the class is instantiated.
+Assuming we run into an issue like this but we don't have or want to do any of the above, we could extend the `calculateRate` method on the run. For this, let's create another _Employee_ object and set the rate to `0.15`. This is sone at where the class is instantiated.
 
 ```java
 // Main.java
@@ -153,9 +157,11 @@ Employee john = new Employee("John Doe") {
 
 The `this` keyword is used to access the _getters_ and _setters_ of the _Employee_ class. The `this` keyword is in the scope of the _constructor_ body.
 
-Overriding the _Employee_ class on fly make it an _Anonymous_ class for just that moment and this _overridden_ method works for just the object that implemented it.
+Overriding the _Employee_ class on the fly makes it an _Anonymous_ class for just that moment and this _overridden_ method works for just the object that implemented it.
 
 ## Inner Class
+
+<div id="inner-class"/>
 
 When we talk about the members of a class, then we are referring to the properties and methods. In java, we can have a class as a member of a class. This is known as a nested class. The snippet below is how I used Inner classes. It is a _User_ class which has _Inner_ classes. One for property validation, _Validation_ and the other, _Response_. _Response_ returns the response after a sign-up.
 
@@ -256,7 +262,7 @@ public class User {
 
 ```
 
-We will create a _User_ object and call the `signup` method which then would return a _Response_ object. We take the _Response_ object, pass it to a method to print it out.
+We will create a _User_ object and call the `signup` method which then would return a _Response_ object. We take the _Response_ object and pass it to a method to print it out.
 
 ```java
 // App.java
@@ -290,7 +296,9 @@ public class App {
 
 ## Enum
 
-An _Enum_ is a type used to for enumeration of constants. It is used to define a collection of constants.
+<div id="enum"/>
+
+An _Enum_ is a type used for the enumeration of constants. It is used to define a collection of constants.
 
 If you want the days of the week, we could do:
 
@@ -355,7 +363,7 @@ public class Day {
 
 ```
 
-Waw! Now all that we want can access directly. Problem solved? Not quite. What would happen when _monday_ is altered? what will happen when any of the properties are altered? Well, we could go back and use the `private` and _getter_ approach. That will work however, we could make all the properties `final`. This way even though the properties are opened, they can't be modified. Also, we can make them `static` so that we won't have to create a object we before access any of the days. Let's try that.
+Waw! Now all that we want can access directly. Problem solved? Not quite. What would happen when _monday_ is altered? what will happen when any of the properties are altered? Well, we could go back and use the `private` and _getter_ approach. That will work however, we could make all the properties `final`. This way even though the properties are opened, they can't be modified. Also, we can make them `static` so that we won't have to create an object before accessing any of the days. Let's try that.
 
 ```java
 // Day.java
@@ -389,7 +397,7 @@ public enum Day {
 
 ```
 
-The all caps is java convention. We can have a `enum` in a file own it own and we can have it as part of a class.
+All caps are for `enum` constants is a java convention. We can have an `enum` in a file on its own and we can have it as part of a class.
 
 ```java
 // DayEnum.java
@@ -409,7 +417,7 @@ public class DayEnum {
 
 ```
 
-We can not have an `enum` inside a _constructor_ or the body of a method. (It is a sealed class). So it can exit as a member. We can not have duplicates in an `enum` as well. This is just like having duplicate attributes. We don't have to declare every property (constant) of the `enum` is `public`, `static` and `final`. So we can not alter the value of an `enum` at run time.
+We can not have an `enum` inside a _constructor_ or the body of a method. (It is a sealed class). So it can exist as a member. We can not have duplicates in an `enum` as well. This is just like having duplicate attributes. We don't have to declare every property (constant) of the `enum` is `public`, `static` and `final`. So we can not alter the value of an `enum` at run time.
 
 An `enum` can be used as a type (it is a type) just as an `int` or `String` could be used. We can pass it as a type to a parameter.
 
@@ -437,7 +445,7 @@ public static void printOrdinal(Day day) {
 }
 ```
 
-We can get an `enum` constant when we pass its `String` name to the `valueOf` method, `valueOf(String name)`. We'd get an error if the name passed doesn't exit.
+We can get an `enum` constant when we pass its `String` name to the `valueOf` method, `valueOf(String name)`. We'd get an error if the name passed doesn't exist.
 
 ```java
 System.out.println(Day.valueOf("MONDAY"));
@@ -518,3 +526,20 @@ public class DayEnum {
 ```
 
 ## Conclusion
+
+<div id="conclusion"/>
+
+_Anonymous_ classes provide a means to _override_ a method on the fly. This is done by opening the _constructor_ using the `@Override` annotation to _overrode_ the said method. The method _overridden_ is only available to the object the _overrode_ it.
+
+An _Inner_ class is a class nested in a class as a member of the class.
+
+## Problem
+
+- Read more on `enum`
+
+### Source
+
+- Sololearn
+- DS Malik
+
+<a href="#top">Top</a>
