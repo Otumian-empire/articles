@@ -44,14 +44,17 @@ So what we have been able to deduce is:
 
 ```c
 #include <stdio.h>
+
 int main() {
     int num = 3;
+
     printf("value of num: %d\n", num);
     printf("address of num: %p\n", &num);
     printf("value at address of num: %d\n", *(&num));
 
     return 0;
 }
+
 ```
 
 ## Delving into pointers
@@ -70,6 +73,7 @@ int *ptr = &var;
 // int *ptr1;
 int *ptr1 = NULL;
 ptr = &var;
+
 ```
 
 Now let's get down to pointer business. Say we have `num` assigned the value of `3`, just as we have done before. We shall create a pointer to `num`.
@@ -77,6 +81,7 @@ Now let's get down to pointer business. Say we have `num` assigned the value of 
 ```c
 int num = 3;
 int *ptr = &num;
+
 ```
 
 I have a question for you? You better play with the code to understand better.
@@ -102,6 +107,7 @@ How do we get the value of a pointer? Don't get confused about the value of a po
 ```c
 printf("value of ptr: %p\n", ptr);
 /* value of ptr: 0x7ffe5faa05cc */
+
 ```
 
 How do we get the value at the pointer? Now the pointer, `ptr` is the same as `&num`. As such the value at the pointer (memory address) - `&num`, is `*(&num)`. `*ptr == *(&num)`.
@@ -109,6 +115,7 @@ How do we get the value at the pointer? Now the pointer, `ptr` is the same as `&
 ```c
 printf("value at ptr: %d\n", *ptr);
 /* value at ptr: 3 */
+
 ```
 
 The pointer, `ptr`, has its own address. How do we get the address of a pointer? This is a familiar question. Precede the variable with `&`.
@@ -116,9 +123,10 @@ The pointer, `ptr`, has its own address. How do we get the address of a pointer?
 ```c
 printf("address of ptr: %p\n", &ptr);
 /* address of ptr: 0x7ffe5faa05d0 */
+
 ```
 
-### Take aways
+### Take away
 
 - In `int *ptr = &num`, `ptr` is the pointer.
 - `ptr` should be assigned `NULL` until given a location.

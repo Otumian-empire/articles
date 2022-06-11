@@ -37,7 +37,7 @@ Let me show you something or how I was able to understand what the whole problem
 3 7 6
 ```
 
-**9** will be picked in W3 then 3, 6 and 7 will be droped from the W1, W2 and W4 respectively
+**9** will be picked in _W3_ then 3, 6 and 7 will be dropped from the _W1_, _W2_ and _W4_ respectively
 
 ```
 1 2
@@ -46,7 +46,7 @@ Let me show you something or how I was able to understand what the whole problem
 3 6
 ```
 
-**6** will be picked in W4 then 2, 4 and 5 will be droped from the W1, W2 and W3 respectively
+**6** will be picked in _W4_ then 2, 4 and 5 will be dropped from the _W1_, _W2_ and _W3_ respectively
 
 ```
 1
@@ -55,13 +55,13 @@ Let me show you something or how I was able to understand what the whole problem
 3
 ```
 
-**3** will be picked in W4 then 1, 2 and 2 will be droped from the W1, W2 and W3 respectively
+**3** will be picked in _W4_ then 1, 2 and 2 will be dropped from the _W1_, _W2_ and _W3_ respectively
 
 The sum of the picked value will be `9 + 6 + 3 = 18`
 
-## How weired?
+## How weird?
 
-There was two ways that dropped in my head but the second one came when I started to think in python. Using the knowlwdge from lists and its indexing.
+There was two ways that dropped in my head but the second one came when I started to think in python. Using the knowledge from lists and its indexing.
 
 First remember, the values in the array (list in python) are all strings and before we can do anything with those value we have to convert each of them to an integer.
 
@@ -114,7 +114,7 @@ The difference here is that, it will be as if we are working backwards, which is
 
 ```py
 
-# returns the sum of the maximun number in each column
+# returns the sum of the maximum number in each column
 
 n = 4
 spin = ['137', '364', '115', '724']
