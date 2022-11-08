@@ -1,0 +1,8 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# this ignored files
+dbnavigator.xml
+modules.xml
+uiDesigner.xml
