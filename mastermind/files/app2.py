@@ -36,14 +36,12 @@ def clear_screen() :
 def isvalid_round(rounds):
     return MIN_ROUNDS <= rounds <= MAX_ROUNDS and rounds % 2 == ZERO
 
-
 # declaring the result of the game
 def declare_result(rounds):
     if rounds > TERMINATING_VALUE:
         print(WIN_PROMPT)
     else:
         print(LOSS_PROMPT)
-
 
 # generate code maker
 def generate_code_maker(duplicates_allowed):
@@ -55,12 +53,10 @@ def generate_code_maker(duplicates_allowed):
         if duplicates_allowed:
             code_maker.append(code)
             counter += ONE
-
         else:
             if not code in code_maker:
                 code_maker.append(code)
                 counter += ONE
-
 
 # compare the code_breaker to the code maker
 def compare_code():
@@ -75,7 +71,6 @@ def compare_code():
         else:
             hints[pos] = LESS
             
-
 # entry point
 def App():
     # The number of times to play must be even between 2 to 12 rounds
@@ -89,17 +84,13 @@ def App():
         except ValueError:
             print(INVALID_ROUNDS_PROMPT)
 
-
     # should there be duplicates
     try:
         duplicates_allowed = int(input(DUPLICATE_PROMPT))
     except ValueError:
         duplicates_allowed = ZERO
 
-
-
     generate_code_maker(duplicates_allowed)
-
 
     # code breaker guesses the code by the code maker
     while rounds > TERMINATING_VALUE:
@@ -115,11 +106,9 @@ def App():
 
         rounds -= ONE
 
-
     declare_result(rounds)
 
     print(code_maker)
-
 
 # infinitely keep playing
 while True:
