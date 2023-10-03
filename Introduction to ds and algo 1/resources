@@ -1,0 +1,50 @@
+"Data Structures and Algorithms in Java" by Robert Sedgewick and Kevin Wayne.
+
+- Prerequisite for Data Structures and Algorithms in Python
+- Introduction to Data structures and ADTs 
+(https://www.zditect.com/blog/57416245.html)
+https://en.wikipedia.org/wiki/Abstract_data_type
+In computer science, an abstract data type (ADT) is a mathematical model for data types. An ADT is defined by its behavior from the point of view of a user, of the data, specifically in terms of possible values, possible operations on data of this type, and the behavior of these operations. This mathematical model contrasts with data structures, which are concrete representations of data, and are the point of view of an implementer, not a user. Formally, an ADT may be defined as a "class of objects whose logical behavior is defined by a set of values and a set of operations"; this is analogous to an algebraic structure in mathematics.
+
+An ADT consists not only of operations but also of a domain of values and of constraints on the defined operations. An "interface" typically refers only to the operations, and perhaps some of the constraints on the operations, such as pre-conditions and post-conditions; but not to other constraints, such as relations between the operations. For example, an abstract stack, which is a last-in-first-out structure, could be defined by three operations: push , that inserts a data item onto the stack; pop , that removes a data item from it; and peek or top , that accesses a data item on top of the stack without removal.
+
+ADTs are a powerful tool for abstraction in computer programming. They allow programmers to focus on the logical behavior of data types, without worrying about the implementation details. This can lead to more robust and reusable code.
+	- Arrays
+	- Lists
+	- Stacks
+	- queues
+	- Sets
+	- Maps
+
+
+
+
+Week 6: Sorting algorithms
+https://techieroop.com/bubble-sort-program-in-python/
+Here are some simple sorting algorithms that you can implement:
+
+* **Bubble sort:** Bubble sort is a simple sorting algorithm that compares adjacent elements and swaps them if they are in the wrong order. It works by repeatedly comparing the first two elements in the array, and if they are in the wrong order, it swaps them. Then, it compares the second and third elements, and so on. This process continues until the array is sorted. Bubble sort is a simple algorithm to implement, but it is not very efficient. It is not recommended for sorting large arrays.
+* **Insertion sort:** Insertion sort is another simple sorting algorithm that works by repeatedly inserting elements into the correct position in a sorted list. It works by starting with an empty list, and then inserting each element in the original list into the correct position in the sorted list. Insertion sort is a simple algorithm to implement, and it is more efficient than bubble sort. However, it is still not very efficient for sorting large arrays.
+* **Selection sort:** Selection sort is a simple sorting algorithm that works by repeatedly finding the smallest element in the array and swapping it with the first element. It works by first finding the smallest element in the array, and then swapping it with the first element. Then, it finds the smallest element in the remaining elements, and swaps it with the second element. This process continues until the array is sorted. Selection sort is a simple algorithm to implement, and it is more efficient than bubble sort and insertion sort. However, it is still not very efficient for sorting large arrays.
+
+If you are looking for a more efficient sorting algorithm, you can use a more complex algorithm such as merge sort or quick sort. However, if you are only sorting small arrays, then one of the simple sorting algorithms listed above may be sufficient.
+
+Week 7: Searching algorithms
+Sure, here are some simple searching algorithms that you can implement:
+
+* **Linear search:** Linear search is the simplest searching algorithm. It works by sequentially comparing each element in the array to the target value. If the target value is found, the algorithm returns the index of the element. Otherwise, the algorithm returns -1. Linear search is a simple algorithm to implement, but it is not very efficient. It is not recommended for searching large arrays.
+* **Binary search:** Binary search is a more efficient searching algorithm than linear search. It works by repeatedly dividing the array in half and searching the half that is more likely to contain the target value. This process continues until the target value is found or the array is empty. Binary search is a more efficient algorithm to implement than linear search, but it is more complex. It is recommended for searching large arrays.
+* **Interpolation search:** Interpolation search is a variation of binary search that uses the value of the target element to estimate the location of the element in the array. This can improve the efficiency of binary search, especially for arrays that are sorted in a nearly sorted order. Interpolation search is a more complex algorithm to implement than binary search, but it can be more efficient for certain types of arrays.
+
+If you are looking for a simple searching algorithm that is easy to implement, then linear search is a good option. If you are looking for a more efficient searching algorithm, then binary search or interpolation search may be a better option.
+
+Here are some additional details about each of the searching algorithms listed above:
+
+* **Linear search:** Linear search works by comparing each element in the array to the target value, starting from the beginning of the array. If the target value is found, the algorithm returns the index of the element. Otherwise, the algorithm returns -1. The time complexity of linear search is O(n), where n is the number of elements in the array.
+* **Binary search:** Binary search works by repeatedly dividing the array in half and searching the half that is more likely to contain the target value. This process continues until the target value is found or the array is empty. The time complexity of binary search is O(log n), where n is the number of elements in the array.
+* **Interpolation search:** Interpolation search works by using the value of the target element to estimate the location of the element in the array. This can improve the efficiency of binary search, especially for arrays that are sorted in a nearly sorted order. The time complexity of interpolation search is O(log2(n)), where n is the number of elements in the array.
+
+
+
+
+ 
